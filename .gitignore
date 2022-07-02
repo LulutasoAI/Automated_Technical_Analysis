@@ -6,6 +6,7 @@ __pycache__/
 # C extensions
 *.so
 data_generator\all
+data_generator\tst
 # Distribution / packaging
 .Python
 build/

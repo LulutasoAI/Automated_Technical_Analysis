@@ -1,0 +1,5 @@
+E:
+cd githubby
+cd yolo
+cd yolov5
+python detect.py --source E:\githubby\Automated_Technical_Analysis\data_generator\tst\down --weights patterndetect.pt --img 640
