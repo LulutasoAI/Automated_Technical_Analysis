@@ -55,14 +55,20 @@ class Data_Generator():
                         df_ = df[start:end]
                         start += range_per_data
                         end += range_per_data
-                        mpf.plot(df_,type="candle", mav=(3,8,21),style='yahoo',closefig=True,savefig=os.path.join(cwd, file, "up", "candlestick_data{}_{}.png".format(stock_id,ct)))
+                        #mpf.plot(df_,type="candle", mav=(3,8,21),style='yahoo',closefig=True,savefig=os.path.join(cwd, file, "up", "candlestick_data{}_{}.png".format(stock_id,ct)))
+                        plt.plot(df_)
+                        plt.savefig(os.path.join(cwd, file, "up", "candlestick_data{}_{}.png".format(stock_id,ct)))
+                        plt.clf()
                         ct += 1
                         print("up")
                     elif (int(df["Close"][end+40]) - int(df["Close"][end])) / int(df["Close"][end]) *100 <= -threshhold_in_percent :
                         df_ = df[start:end]
                         start += range_per_data
                         end += range_per_data
-                        mpf.plot(df_,type="candle", mav=(3,8,21),style='yahoo',closefig=True,savefig=os.path.join(cwd, file, "down", "candlestick_data{}_{}.png".format(stock_id,ct)))
+                        #mpf.plot(df_,type="candle", mav=(3,8,21),style='yahoo',closefig=True,savefig=os.path.join(cwd, file, "down", "candlestick_data{}_{}.png".format(stock_id,ct)))
+                        plt.plot(df_)
+                        plt.savefig(os.path.join(cwd, file, "down", "candlestick_data{}_{}.png".format(stock_id,ct)))
+                        plt.clf()
                         ct += 1
                         print("down")
                     else:

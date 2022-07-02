@@ -11,7 +11,7 @@ class Data_generator_handler():
         input_OK = False
         while not input_OK:
             try:
-                method = int(input("Data retrieval method? 0 for 10 symbols 1 for 501 symbols. 4 for Nikkei225"))
+                method = int(input("Data retrieval method? 0 for 10 symbols 1 for 501 symbols. 4 for Nikkei225, 5 for Tesla"))
                 input_OK =True
             except:
                 method = int(input("input int number please."))

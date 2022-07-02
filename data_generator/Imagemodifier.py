@@ -26,12 +26,15 @@ class Image_modifier():
 
         for i,picture_path in enumerate(picture_paths):
             image = Image.open(picture_path)
+            
             if i == 0:
                 if image.size!=(800,575): #If already cropped before exit. #
                     print("going to exit")
-                    sys.exit()
+                    print(image.size)
+                    #sys.exit()
                 w, h = image.size
-                box = (w*0.2,h*0.13,w*0.89,h*0.8)
+                #box = (w*0.2,h*0.13,w*0.89,h*0.8)
+                box = (w*0.13,h*0.12,w*0.90,h*0.84)
             image.crop(box).save(picture_path)
 
             
